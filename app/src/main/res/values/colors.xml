@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#1A529D</color>
     <color name="purple">#1A529D</color>
+    <color name="semi_black">#4D4D4D</color>
 </resources>
