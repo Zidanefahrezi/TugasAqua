@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TugasAqua</string>
+    <string name="email_oliv">olivia.gabrielle@gmail.com</string>
+    <string name="selamatpagi">Selamat Pagi </string>
+    <string name="scan">Scan kode dibalik tutup botol dan tukarkan hadiah menarik</string>
+    <string name="jumlah_Tbotol">30</string>
+    <string name="Vaganza">Vaganza Fiesta</string>
+    <string name="hadiahmenarik">Hadiah Menarik</string>
 </resources>

@@ -19,4 +19,10 @@ public class Mainregister extends AppCompatActivity {
         startActivity(intent );
 
     }
+
+    public void mainberanda (View view) {
+        Intent intent = new Intent(Mainregister.this,MainBerandaUtama.class);
+        startActivity(intent );
+
+    }
 }

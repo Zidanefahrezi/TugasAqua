@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TugasAqua">
         <activity
+            android:name=".MainBerandaUtama"
+            android:exported="true" />
+        <activity
+            android:name=".MainButtonBar"
+            android:exported="true" />
+        <activity
             android:name=".Mainlogin"
             android:exported="true" />
         <activity

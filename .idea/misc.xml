@@ -9,10 +9,12 @@
         <entry key="..\:/Users/aezid/AndroidStudioProjects/TugasAqua/app/src/main/res/drawable/gp3_loginrc.xml" value="0.16296296296296298" />
         <entry key="..\:/Users/aezid/AndroidStudioProjects/TugasAqua/app/src/main/res/drawable/ic_orangvg.xml" value="0.16296296296296298" />
         <entry key="..\:/Users/aezid/AndroidStudioProjects/TugasAqua/app/src/main/res/drawable/tombol.xml" value="0.12552083333333333" />
-        <entry key="..\:/Users/aezid/AndroidStudioProjects/TugasAqua/app/src/main/res/layout/activity_enterlogin.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/aezid/AndroidStudioProjects/TugasAqua/app/src/main/res/layout/activity_beranda_utama.xml" value="0.22" />
+        <entry key="..\:/Users/aezid/AndroidStudioProjects/TugasAqua/app/src/main/res/layout/activity_enterlogin.xml" value="0.22" />
         <entry key="..\:/Users/aezid/AndroidStudioProjects/TugasAqua/app/src/main/res/layout/activity_login.xml" value="0.22" />
-        <entry key="..\:/Users/aezid/AndroidStudioProjects/TugasAqua/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/aezid/AndroidStudioProjects/TugasAqua/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/aezid/AndroidStudioProjects/TugasAqua/app/src/main/res/layout/activity_register.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/aezid/AndroidStudioProjects/TugasAqua/app/src/main/res/layout/button_option.xml" value="0.16666666666666666" />
       </map>
     </option>
   </component>

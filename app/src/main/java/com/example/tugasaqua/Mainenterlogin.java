@@ -19,4 +19,10 @@ public class Mainenterlogin extends AppCompatActivity {
         startActivity(intent );
 
     }
+
+    public void berandautama (View view) {
+        Intent intent = new Intent(Mainenterlogin.this,MainBerandaUtama.class);
+        startActivity(intent );
+
+    }
 }
