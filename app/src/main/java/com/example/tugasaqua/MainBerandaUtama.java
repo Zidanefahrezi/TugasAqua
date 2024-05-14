@@ -31,4 +31,10 @@ public class MainBerandaUtama extends AppCompatActivity {
 
     }
 
+    public void scan(View view) {
+        Intent intent = new Intent(MainBerandaUtama.this, Mainscan_tutupbotol.class);
+        startActivity(intent );
+
+    }
+
 }

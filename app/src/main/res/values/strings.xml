@@ -1,9 +1,16 @@
 <resources>
-    <string name="app_name">TugasAqua</string>
+    <string name="app_name">AQUA</string>
     <string name="email_oliv">olivia.gabrielle@gmail.com</string>
     <string name="selamatpagi">Selamat Pagi </string>
     <string name="scan">Scan kode dibalik tutup botol dan tukarkan hadiah menarik</string>
     <string name="jumlah_Tbotol">30</string>
     <string name="Vaganza">Vaganza Fiesta</string>
     <string name="hadiahmenarik">Hadiah Menarik</string>
+    <string name="scan_tutup_">Scan Tutup Botol</string>
+    <string name="total_tutup">Total Tutup Botol\n<b>Olivia Gabrielle</b> <font color="#1A529D">30</font></string>
+    <string name="setiap_kali">Setiap kali Anda berhasil memindai kode yang belum pernah diklaim sebelumnya, Anda akan menerima 1 poin.</string>
+    <string name="scan_ktp_un">Scan KTP untuk melanjutkan proses klaim tutup botol. Pastikan foto KTP terlihat dengan jelas</string>
+    <string name="scan_ktp">Scan KTP</string>
+    <string name="redeemvagan">RedeemVaganza</string>
+    <string name="some1_id">400</string>
 </resources>

@@ -114,7 +114,8 @@
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
                         android:layout_toRightOf="@id/murnihorizontal"
-                        android:background="@drawable/page5_2">
+                        android:background="@drawable/page5_2"
+                        android:onClick="scan">
 
                         <View
                             android:id="@+id/group_373"
