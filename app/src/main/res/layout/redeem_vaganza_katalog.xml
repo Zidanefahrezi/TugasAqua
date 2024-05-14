@@ -7,6 +7,7 @@
     android:scaleType="fitXY"
     android:background="@drawable/group_15"
     tools:context=".Main_redeemvgkatalog">
+
     <RelativeLayout
         android:id="@+id/group_385"
         android:layout_width="220dp"
@@ -76,82 +77,49 @@
     <LinearLayout
         android:id="@+id/menus"
         android:layout_marginTop="-220dp"
-        android:layout_width="wrap_content"
+        android:layout_width="365dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rectangle_11">
+
         <ImageView
             android:id="@+id/group_378a"
             android:layout_width="175dp"
             android:layout_height="211dp"
+            android:layout_margin="5dp"
             android:background="@drawable/group_378a" />
 
-        <RelativeLayout
-            android:id="@+id/foodvoucher35"
+        <ImageView
+            android:id="@+id/group_379a"
             android:layout_width="175dp"
             android:layout_height="211dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/food_voucher">
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="28dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="97dp"
-                android:layout_marginBottom="123dp"
-                android:background="@drawable/tambah_kurang" />
-        </RelativeLayout>
+            android:layout_margin="5dp"
+            android:background="@drawable/group_379a" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="365dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menus">
 
-        <RelativeLayout
-            android:id="@+id/vouchergofood"
+        <ImageView
+            android:id="@+id/group_380a"
             android:layout_width="175dp"
             android:layout_height="211dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/vouchergofood">
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="28dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="97dp"
-                android:layout_marginBottom="123dp"
-                android:background="@drawable/tambah_kurang" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/cashbackshope"
+            android:layout_margin="5dp"
+            android:background="@drawable/group_380a" />
+        <ImageView
+            android:id="@+id/group_870a"
             android:layout_width="175dp"
             android:layout_height="211dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/cb_shope">
-
-            <ImageView
-                android:layout_width="64dp"
-                android:layout_height="28dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="97dp"
-                android:layout_marginBottom="123dp"
-                android:background="@drawable/tambah_kurang" />
-        </RelativeLayout>
+            android:layout_margin="5dp"
+            android:background="@drawable/group_870a" />
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
