@@ -105,7 +105,8 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
-                        android:background="@drawable/page5_1" />
+                        android:background="@drawable/page5_1"
+                        android:onClick="reedemv" />
 
                     <RelativeLayout
                         android:id="@+id/scanaquahorizontal"
@@ -169,7 +170,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_toRightOf="@id/scanaquahorizontal"
-                        android:background="@drawable/page5_3" />
+                        android:background="@drawable/page5_3"
+                        android:onClick="wheel"/>
                 </RelativeLayout>
             </HorizontalScrollView>
 

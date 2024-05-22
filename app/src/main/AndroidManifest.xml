@@ -34,6 +34,12 @@
             android:name=".Mainscan_KTP"
             android:exported="true" />
         <activity
+            android:name=".Mainspinwheel_april"
+            android:exported="true" />
+        <activity
+            android:name=".Mainspinwheel_periode"
+            android:exported="true" />
+        <activity
             android:name=".Mainscan_tutupbotol"
             android:exported="true" />
         <activity

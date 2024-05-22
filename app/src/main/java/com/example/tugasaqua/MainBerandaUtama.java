@@ -37,4 +37,16 @@ public class MainBerandaUtama extends AppCompatActivity {
 
     }
 
+    public void wheel(View view) {
+        Intent intent = new Intent(MainBerandaUtama.this,Mainspinwheel_april.class);
+        startActivity(intent );
+
+    }
+
+    public void reedemv(View view) {
+        Intent intent = new Intent(MainBerandaUtama.this,Main_redeem_royalvaganza.class);
+        startActivity(intent );
+
+    }
+
 }

@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scaleType="fitXY"
-    android:background="@drawable/group_14"
-    tools:context=".Main_redeem_royalvaganza">
+    android:background="@drawable/group_18"
+    tools:context=".Mainspinwheel_april">
+
     <RelativeLayout
         android:id="@+id/group_385"
         android:layout_width="220dp"
@@ -25,7 +26,6 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="0dp"
             android:background="@drawable/gp3_arrow"
-            android:onClick="main_menu"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
@@ -41,42 +41,51 @@
 
     </RelativeLayout>
 
-    <ImageView
-        android:layout_width="54dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="600dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/tambah_kurang"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/some_id"
-        android:layout_width="31dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="632dp"
-        android:layout_marginEnd="32dp"
-        android:gravity="center_vertical"
-        android:lineSpacingExtra="12sp"
-        android:text="@string/some1_id"
-        android:textAppearance="@style/some1_id"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/group_915"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_385" />
+
+    <ImageView
+        android:id="@+id/wheel_bg"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/wheel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/wheel"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/arrow_wheel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
 
     <Button
         android:id="@+id/rectangle_11"
         android:layout_width="347dp"
         android:layout_height="70dp"
-        android:layout_marginTop="680dp"
+        android:layout_marginTop="636dp"
         android:background="@drawable/rectangle_11"
-        android:onClick="redeemv2"
         android:text="Redeem"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textAllCaps="false"
-        android:fontFamily="@font/montserrat_semibold"
-        android:textSize="18sp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

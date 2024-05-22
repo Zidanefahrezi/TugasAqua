@@ -89,14 +89,16 @@
             android:layout_width="175dp"
             android:layout_height="211dp"
             android:layout_margin="5dp"
-            android:background="@drawable/group_378a" />
+            android:background="@drawable/group_378a"
+            android:onClick="diskon70"/>
 
         <ImageView
             android:id="@+id/group_379a"
             android:layout_width="175dp"
             android:layout_height="211dp"
             android:layout_margin="5dp"
-            android:background="@drawable/group_379a" />
+            android:background="@drawable/group_379a"
+            android:onClick="wheel2"/>
 
     </LinearLayout>
 
