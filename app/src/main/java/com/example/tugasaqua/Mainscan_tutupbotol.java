@@ -1,36 +1,40 @@
 package com.example.tugasaqua;
 
-import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.view.View;
-
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import com.budiyev.android.codescanner.AutoFocusMode;
 import com.budiyev.android.codescanner.CodeScanner;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.budiyev.android.codescanner.DecodeCallback;
 import com.budiyev.android.codescanner.ErrorCallback;
 import com.budiyev.android.codescanner.ScanMode;
-import com.google.zxing.Result;
+import android.widget.ImageView;
+import android.view.View;
+import android.content.SharedPreferences;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class Mainscan_tutupbotol extends AppCompatActivity {
 
     private static final int CAMERA_REQUEST_CODE = 101;
+    private static final long SCAN_DELAY = 3000L; // Delay in milliseconds (3 seconds)
 
     private CodeScanner codeScanner;
     private CodeScannerView scannerView;
     private TextView tv_textView;
+    private Set<String> scannedCodes = new HashSet<>();
+    private boolean isScanEnabled = true; // Flag to control barcode scanning
+    private Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,24 +45,18 @@ public class Mainscan_tutupbotol extends AppCompatActivity {
         imageView.setVisibility(View.INVISIBLE);
 
         Button menu = findViewById(R.id.vector);
-        menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Mainscan_tutupbotol.this, MainBerandaUtama.class);
-                startActivity(intent);
-            }
+        menu.setOnClickListener(view -> {
+            Intent intent = new Intent(this, MainBerandaUtama2.class);
+            startActivity(intent);
         });
 
         Button btnlogin = findViewById(R.id.btnlogin);
-        btnlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Mainscan_tutupbotol.this, Mainscan_KTP.class);
-                startActivity(intent);
-            }
+        btnlogin.setOnClickListener(view -> {
+            Intent intent = new Intent(this, MainBerandaUtama2.class);
+            startActivity(intent);
         });
 
-        tv_textView = findViewById(R.id.tv_textView);
+        tv_textView = findViewById(R.id.btnlogin);
 
         setupPermission();
         scannerView = findViewById(R.id.scanner_view);
@@ -66,64 +64,81 @@ public class Mainscan_tutupbotol extends AppCompatActivity {
     }
 
     private void codeScanner() {
-        final ImageView imageView = findViewById(R.id.img_textView);
+        ImageView imageView = findViewById(R.id.img_textView);
+        ImageView imageViewWarning = findViewById(R.id.img_textView_w);
+        imageViewWarning.setVisibility(View.INVISIBLE);
+
         codeScanner = new CodeScanner(this, scannerView);
 
         codeScanner.setCamera(CodeScanner.CAMERA_BACK);
         codeScanner.setFormats(CodeScanner.ALL_FORMATS);
+
         codeScanner.setAutoFocusMode(AutoFocusMode.SAFE);
         codeScanner.setScanMode(ScanMode.CONTINUOUS);
         codeScanner.setAutoFocusEnabled(true);
-        codeScanner.setFlashEnabled(true);
+        codeScanner.setFlashEnabled(false);
 
-        codeScanner.setDecodeCallback(new DecodeCallback() {
-            @Override
-            public void onDecoded(@NonNull final Result result) {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        imageView.setVisibility(View.VISIBLE);
-                        // tv_textView.setText(result.getText()); // Uncomment this line if you want to display the scanned text
-                    }
-                });
+        codeScanner.setDecodeCallback(result -> runOnUiThread(() -> {
+            String scannedCode = result.getText();
+            if (isScanEnabled) {
+                if (scannedCodes.contains(scannedCode)) {
+                    imageView.setVisibility(View.INVISIBLE);
+                    imageViewWarning.setVisibility(View.VISIBLE);
+                    tv_textView.setText("submit");
+                } else {
+                    scannedCodes.add(scannedCode);
+                    imageView.setVisibility(View.VISIBLE);
+                    imageViewWarning.setVisibility(View.INVISIBLE);
+                    tv_textView.setText("save");
+                    // Update the score
+                    updateScore();
+
+                    delayScan();
+                }
             }
-        });
+        }));
 
-        codeScanner.setErrorCallback(new ErrorCallback() {
-            @Override
-            public void onError(@NonNull final Throwable error) {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Log.e("main", "camera error, " + error.getMessage());
-                    }
-                });
-            }
-        });
+        codeScanner.setErrorCallback(error -> runOnUiThread(() -> {
+            Log.e("main", "camera error, " + error.getMessage());
+        }));
 
-
-        scannerView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        scannerView.setOnClickListener(view -> {
+            if (isScanEnabled) {
                 codeScanner.startPreview();
             }
         });
     }
 
+    private void updateScore() {
+        // Get the current score from SharedPreferences
+        SharedPreferences prefs = getSharedPreferences("myPrefs", MODE_PRIVATE);
+        int score = prefs.getInt("score", 30);
+
+        // Add 100 to the score
+        score += 1;
+
+        // Save the updated score back to SharedPreferences
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("score", score);
+        editor.apply();
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
-        codeScanner.startPreview();
+        if (isScanEnabled) {
+            codeScanner.startPreview();
+        }
     }
 
     @Override
     protected void onPause() {
-        super.onPause();
         codeScanner.releaseResources();
+        super.onPause();
     }
 
     private void setupPermission() {
-        int permission = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
+        int permission = ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA);
 
         if (permission != PackageManager.PERMISSION_GRANTED) {
             makeRequest();
@@ -131,11 +146,11 @@ public class Mainscan_tutupbotol extends AppCompatActivity {
     }
 
     private void makeRequest() {
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, CAMERA_REQUEST_CODE);
+        ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.CAMERA}, CAMERA_REQUEST_CODE);
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == CAMERA_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -144,5 +159,14 @@ public class Mainscan_tutupbotol extends AppCompatActivity {
                 Toast.makeText(this, "You need camera permission", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    // Method to delay barcode scanning for SCAN_DELAY
+    private void delayScan() {
+        isScanEnabled = false;
+        handler.postDelayed(() -> {
+            isScanEnabled = true;
+            codeScanner.startPreview(); // Restart the preview after delay
+        }, SCAN_DELAY);
     }
 }

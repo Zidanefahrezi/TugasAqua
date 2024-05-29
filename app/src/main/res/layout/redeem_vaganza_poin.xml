@@ -41,42 +41,67 @@
 
     </RelativeLayout>
 
-    <ImageView
-        android:layout_width="54dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="600dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/tambah_kurang"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/frame_3668"
+        android:layout_width="64dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="152dp"
+        android:background="@drawable/frame_3668"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/some_id"
-        android:layout_width="31dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="632dp"
-        android:layout_marginEnd="32dp"
-        android:gravity="center_vertical"
-        android:lineSpacingExtra="12sp"
-        android:text="@string/some1_id"
-        android:textAppearance="@style/some1_id"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/group_389"
+        android:layout_width="35dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="116dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/rectangle_11"
-        android:layout_width="347dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="680dp"
-        android:background="@drawable/rectangle_11"
-        android:onClick="redeemv2"
-        android:text="Redeem"
-        android:textColor="@color/white"
+        <TextView
+            android:id="@+id/some_id"
+            android:layout_width="31dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="12sp"
+            android:text="@string/some_id"
+            android:textAppearance="@style/some_id" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/group_361"
+        android:layout_width="324dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textAllCaps="false"
-        android:fontFamily="@font/montserrat_semibold"
-        android:textSize="18sp"/>
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/rectangle_11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_11"
+            android:fontFamily="@font/montserrat_semibold"
+            android:onClick="redeemv2"
+            android:text="Redeem"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

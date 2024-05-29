@@ -9,12 +9,14 @@
     tools:context=".Main_undian_evg">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="355dp"
         android:layout_height="80dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="372dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="wheel1">
 
         <View
             android:id="@+id/rectangle_5"
@@ -34,5 +36,27 @@
             android:textAppearance="@style/diskon70h" />
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="355dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/selamat_and"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center_horizontal|center_vertical"
+            android:lineHeight="28sp"
+            android:text="@string/selamat_anda"
+            android:textAppearance="@style/selamat_anda"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="550dp" />
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -105,7 +105,8 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
-                        android:background="@drawable/page5_1" />
+                        android:background="@drawable/page5_1"
+                        android:onClick="reedemv" />
 
                     <RelativeLayout
                         android:id="@+id/scanaquahorizontal"
@@ -185,7 +186,7 @@
                 android:elevation="10dp">
 
                 <TextView
-                    android:id="@+id/id_30"
+                    android:id="@+id/some_id"
                     android:layout_width="105dp"
                     android:layout_height="50dp"
                     android:layout_alignParentEnd="true"
@@ -194,7 +195,7 @@
                     android:layout_marginBottom="156dp"
                     android:gravity="center_horizontal|center_vertical"
                     android:lineSpacingExtra="-25sp"
-                    android:text="@string/jumlah_Tbotol"
+                    android:text="@string/jumlah_Tbotola"
                     android:textAppearance="@style/jumlah_Tbotol" />
 
                 <ImageButton
@@ -210,84 +211,86 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/cashbackshope"
-                android:layout_width="175dp"
-                android:layout_height="211dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="203dp"
-                android:layout_marginTop="774dp"
-                android:background="@drawable/cb_shope">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/group_362"
+                    android:layout_width="355dp"
+                    android:layout_height="127dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="772dp"
+                    android:elevation="4dp" />
 
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="28dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="97dp"
-                    android:layout_marginBottom="123dp"
-                    android:background="@drawable/tambah_kurang" />
+                    android:id="@+id/group_362a"
+                    android:layout_width="355dp"
+                    android:layout_height="127dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="772dp"
+                    android:elevation="4dp"
+                    android:onClick="reedemv2"
+                    android:src="@drawable/group_362" />
+
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/diskon70persen"
-                android:layout_width="175dp"
-                android:layout_height="211dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="19dp"
-                android:layout_marginTop="774dp"
-                android:background="@drawable/diskon70"
-                android:onClick="reedemv">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/group_871a"
+                    android:layout_width="355dp"
+                    android:layout_height="127dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="924dp"
+                    android:elevation="4dp" />
 
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="28dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="97dp"
-                    android:layout_marginBottom="123dp"
-                    android:background="@drawable/tambah_kurang" />
+                    android:id="@+id/group_871"
+                    android:layout_width="355dp"
+                    android:layout_height="127dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="923dp"
+                    android:elevation="4dp"
+                    android:src="@drawable/group_871"
+                    android:onClick="undianevg"/>
+
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/vouchergofood"
-                android:layout_width="175dp"
-                android:layout_height="211dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="203dp"
-                android:layout_marginTop="1004dp"
-                android:background="@drawable/vouchergofood">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/group_873"
+                    android:layout_width="355dp"
+                    android:layout_height="127dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="1076dp"
+                    android:elevation="4dp" />
 
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="28dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="97dp"
-                    android:layout_marginBottom="123dp"
-                    android:background="@drawable/tambah_kurang" />
-            </RelativeLayout>
+                    android:id="@+id/group_873a"
+                    android:layout_width="355dp"
+                    android:layout_height="127dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="1076dp"
+                    android:elevation="4dp"
+                    android:src="@drawable/group_873" />
 
-            <RelativeLayout
-                android:id="@+id/foodvoucher35"
-                android:layout_width="175dp"
-                android:layout_height="211dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="19dp"
-                android:layout_marginTop="1004dp"
-                android:background="@drawable/food_voucher">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="28dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="97dp"
-                    android:layout_marginBottom="123dp"
-                    android:background="@drawable/tambah_kurang" />
             </RelativeLayout>
 
             <RelativeLayout

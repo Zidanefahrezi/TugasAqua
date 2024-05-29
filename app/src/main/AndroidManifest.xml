@@ -19,6 +19,9 @@
             android:name=".MainBerandaUtama"
             android:exported="true" />
         <activity
+            android:name=".MainBerandaUtama2"
+            android:exported="true" />
+        <activity
             android:name=".Main_klaim_tb"
             android:exported="true" />
         <activity
