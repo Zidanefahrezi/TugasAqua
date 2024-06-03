@@ -16,10 +16,10 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.057"
+        app:layout_constraintVertical_bias="0.056"
         app:srcCompat="@drawable/gp3_arrow" />
 
     <Button
@@ -31,17 +31,16 @@
         android:backgroundTint="@color/blue"
         android:fontFamily="@font/montserrat_semibold"
         android:gravity="center_horizontal|center_vertical"
-        android:text="Register"
+        android:onClick="berandautama"
+        android:text="Login"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:onClick="loginpage"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.928"
-        android:textAllCaps="false"
-        android:textSize="18sp"/>
+        app:layout_constraintVertical_bias="0.953" />
 
     <TextView
         android:id="@+id/textView6"
@@ -49,33 +48,17 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_semibold"
         android:gravity="center_horizontal|center_vertical"
-        android:text="Register"
+        android:text="Login"
         android:textColor="@color/semi_black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17" />
+        app:layout_constraintVertical_bias="0.058" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_medium"
-        android:text="Nama Lengkap"
-        android:textColor="@color/semi_black"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.266" />
-
-    <TextView
-        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_medium"
@@ -84,92 +67,13 @@
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="350dp"
-        android:layout_height="55dp"
-        android:layout_centerInParent="true"
-        android:layout_margin="15dp"
-        android:background="@drawable/gp3_loginrc"
-        android:drawableLeft="@drawable/ic_orangvg"
-        android:drawablePadding="10dp"
-        android:paddingLeft="15dp"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="350dp"
-        android:layout_height="55dp"
-        android:layout_centerInParent="true"
-        android:layout_margin="15dp"
-        android:background="@drawable/gp3_loginrc"
-        android:drawableLeft="@drawable/gp3_mail"
-        android:drawablePadding="10dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473" />
-
-    <EditText
-        android:id="@+id/editText13"
-        android:layout_width="350dp"
-        android:layout_height="55dp"
-        android:layout_centerInParent="true"
-        android:layout_margin="15dp"
-        android:background="@drawable/gp3_loginrc"
-        android:drawableLeft="@drawable/gp3_lock"
-        android:drawableRight="@drawable/gp3_antieye"
-        android:drawablePadding="10dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:text=""
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625" />
-
-    <EditText
-        android:id="@+id/editText12"
-        android:layout_width="350dp"
-        android:layout_height="55dp"
-        android:layout_centerInParent="true"
-        android:layout_margin="15dp"
-        android:background="@drawable/gp3_loginrc"
-        android:drawableLeft="@drawable/gp3_lock"
-        android:drawableRight="@drawable/gp3_antieye"
-        android:drawablePadding="10dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:text=""
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.778" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_medium"
@@ -178,24 +82,48 @@
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.548" />
+        app:layout_constraintVertical_bias="0.475" />
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_medium"
-        android:text="Konfirmasi Kata Sandi"
-        android:textColor="@color/semi_black"
-        android:textSize="17sp"
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/gp3_loginrc"
+        android:drawableLeft="@drawable/gp3_mail"
+        android:drawablePadding="10dp"
+        android:paddingLeft="15dp"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685" />
+        app:layout_constraintVertical_bias="0.286" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/gp3_loginrc"
+        android:drawableLeft="@drawable/gp3_lock"
+        android:drawableRight="@drawable/gp3_antieye"
+        android:drawablePadding="10dp"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.639" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

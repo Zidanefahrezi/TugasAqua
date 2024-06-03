@@ -20,8 +20,8 @@ public class Mainregister extends AppCompatActivity {
 
     }
 
-    public void mainberanda (View view) {
-        Intent intent = new Intent(Mainregister.this,MainBerandaUtama.class);
+    public void loginpage (View view) {
+        Intent intent = new Intent(Mainregister.this,Mainenterlogin.class);
         startActivity(intent );
 
     }
